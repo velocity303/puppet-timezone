@@ -50,7 +50,8 @@ class timezone (
   $ensure = 'present',
   $timezone = 'Etc/UTC',
   $hwutc = true,
-  $autoupgrade = false
+  $autoupgrade = false,
+  $timezone_file_supports_comment = $timezone::params::timezone_file_supports_comment,
 ) inherits timezone::params {
 
   validate_bool($hwutc)
